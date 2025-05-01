@@ -1,0 +1,3 @@
+[submodule "animation-ai-suite/latexocr"]
+	path = animation-ai-suite/latexocr
+	url = https://github.com/leonlenk/LaTeX_OCR.git
