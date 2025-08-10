@@ -1,0 +1,60 @@
+BasedOnStyle: LLVM
+Language: Cpp
+Standard: c++20
+
+# Layout
+IndentWidth: 4
+TabWidth: 4
+UseTab: Never
+ColumnLimit: 120
+AccessModifierOffset: -2
+NamespaceIndentation: None
+AlignEscapedNewlines: Left
+BreakBeforeBraces: Allman
+AllowShortFunctionsOnASingleLine: Empty
+AllowShortIfStatementsOnASingleLine: Never
+AllowShortLoopsOnASingleLine: False
+
+# Includes
+IncludeBlocks: Regroup
+SortIncludes: true
+IncludeCategories:
+  - Regex: '^<([[:alnum:]_]+|c\+\+|sys|mach|windows\.h|vulkan)/'
+    Priority: 1     # system & platform headers
+  - Regex: '^<.+>'
+    Priority: 2     # third-party library headers
+  - Regex: '^"core/.+'
+    Priority: 3
+  - Regex: '^"renderer/.+'
+    Priority: 3
+  - Regex: '^"ui/.+'
+    Priority: 3
+  - Regex: '^"io/.+'
+    Priority: 3
+  - Regex: '^"manim_bridge/.+'
+    Priority: 3
+  - Regex: '^".+'
+    Priority: 4     # other project headers
+
+# Pointers/refs
+PointerAlignment: Left
+DerivePointerAlignment: false
+ReferenceAlignment: Left
+SpaceAfterCStyleCast: true
+
+# Constructors, init lists, and lambdas
+ConstructorInitializerAllOnOneLineOrOnePerLine: true
+ConstructorInitializerIndentWidth: 4
+AllowAllArgumentsOnNextLine: false
+BinPackArguments: false
+BinPackParameters: false
+LambdaBodyIndentation: Signature
+
+# Templates and macros
+AlwaysBreakTemplateDeclarations: Yes
+AlignAfterOpenBracket: Align
+SpacesInAngles: false
+
+# Comments
+ReflowComments: true
+SpacesBeforeTrailingComments: 2
